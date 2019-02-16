@@ -38,8 +38,11 @@ public class Doc : MonoBehaviour
 		{
 			goalAngle = Mathf.Atan2 (horz, vert) * Mathf.Rad2Deg;
 			currentAngle = Mathf.Lerp (currentAngle, goalAngle, turnSmoothing * Time.deltaTime);
-			visual.transform.localEulerAngles = new Vector3 (0, currentAngle, 0);
+
 		}
+		var leanAngle = vec.magnitude * 18f;
+		visual.transform.localEulerAngles = new Vector3 (leanAngle, currentAngle, 0);
+
 
 	}
 
