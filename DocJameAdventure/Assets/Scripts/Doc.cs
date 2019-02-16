@@ -34,6 +34,7 @@ public class Doc : MonoBehaviour
 		//transform.position += posDelta;
 		rb.MovePosition (transform.position + posDelta);
 
+
 		if (vec.magnitude > 0)
 		{
 			goalAngle = Mathf.Atan2 (horz, vert) * Mathf.Rad2Deg;
